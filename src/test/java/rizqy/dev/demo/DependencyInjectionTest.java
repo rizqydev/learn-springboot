@@ -19,11 +19,9 @@ public class DependencyInjectionTest {
     applicationContext = new AnnotationConfigApplicationContext(DependencyInjectionConfiguration.class);
   }
 
-  
-
   @Test
   void testDI() {
-    Foo foo = applicationContext.getBean(Foo.class);
+    Foo foo = applicationContext.getBean("fooSecond", Foo.class);
     Bar bar = applicationContext.getBean(Bar.class);
     FooBar foobar = applicationContext.getBean(FooBar.class);
 
