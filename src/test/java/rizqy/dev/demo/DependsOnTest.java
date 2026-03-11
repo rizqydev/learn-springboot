@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import rizqy.dev.demo.data.Foo;
+
 public class DependsOnTest {
-
-
   private ApplicationContext applicationContext;
 
   @BeforeEach
@@ -17,6 +17,7 @@ public class DependsOnTest {
 
   @Test
   void testDependsOn() {
+    Foo foo = applicationContext.getBean(Foo.class);
     
   }
 
